@@ -22,6 +22,9 @@ class NativeSvg extends Component<IContentLoaderProps> {
     speed: 1.2,
     interval: 0.25,
     style: {},
+    gradientOffset: [0, 0.5, 1],
+    useAngle: false,
+    angle: 0,
   }
 
   animatedValue = new Animated.Value(-1)
@@ -76,6 +79,9 @@ class NativeSvg extends Component<IContentLoaderProps> {
       foregroundColor,
       rtl,
       style,
+      gradientOffset,
+      useAngle,
+      angle,
       ...props
     } = this.props
 
@@ -119,10 +125,11 @@ class NativeSvg extends Component<IContentLoaderProps> {
             x2={x2Animation}
             y1={0}
             y2={0}
+            {...(useAngle ? { gradientTransform: `rotate(${angle})` } : {})}
           >
-            <Stop offset={0} stopColor={backgroundColor} />
-            <Stop offset={0.5} stopColor={foregroundColor} />
-            <Stop offset={1} stopColor={backgroundColor} />
+            <Stop offset={gradientOffset[0]} stopColor={backgroundColor} />
+            <Stop offset={gradientOffset[1]} stopColor={foregroundColor} />
+            <Stop offset={gradientOffset[2]} stopColor={backgroundColor} />
           </AnimatedLinearGradient>
         </Defs>
       </Svg>

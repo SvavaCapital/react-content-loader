@@ -10,6 +10,9 @@ export interface IContentLoaderProps extends SvgProps {
   speed?: number
   interval?: number
   uniqueKey?: string
+  gradientOffset?: number[],
+  useAngle?: boolean,
+  angle?: number,
 }
 
 export { default as Facebook } from './presets/FacebookStyle'
