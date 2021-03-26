@@ -7,7 +7,7 @@
   },
   "author": "Danilo Woznica <danilowoz@gmail.com>",
   "license": "MIT",
-  "main": "dist/react-content-loader.cjs.js",
+  "main": "src/native/index.ts",
   "module": "dist/react-content-loader.es.js",
   "jsnext:main": "dist/react-content-loader.es.js",
   "types": "dist/web/index.d.ts",
