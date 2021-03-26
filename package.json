@@ -26,8 +26,8 @@
     "svg"
   ],
   "files": [
-    "dist",
-    "native"
+    "src/shared",
+    "src/native"
   ],
   "sideEffects": false,
   "scripts": {
